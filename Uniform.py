@@ -25,7 +25,7 @@ def chiSquaredTest(data, k=10, chiSquare=3.325):
     reject = chiSqured_naught > chiSquare
     print('Chi Squared: {}'.format(chiSqured_naught))
     if (reject):
-        print(" rejecting uniformity based on chi squared test")
+        print(" rejecting null hypothesis based on chi squared test")
     else:
-        print(" not rejecting uniformity based on chi squared test")
+        print(" not rejecting null hypothesis based on chi squared test")
     

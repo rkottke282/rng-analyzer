@@ -30,6 +30,7 @@ def analyze(filename):
     # run kolmogorov smirnov
     kstestLess = sc.stats.kstest(data, sc.stats.uniform.cdf, alternative='less')
     kstestGreater = sc.stats.kstest(data, sc.stats.uniform.cdf, alternative='greater')
+    print(kstestGreater, kstestLess)
     print(kstestLess[1] <=.05, kstestGreater[1]<=.05)
 
 
@@ -38,3 +39,5 @@ analyze('JsfRandom')
 analyze('Pcg64dxsmRandom')
 analyze('pythonBaseRandom')
 analyze('Xoshiro256Random')
+
+analyze('baserandom')
